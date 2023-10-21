@@ -52,37 +52,76 @@ The application consists of three main components:
 - Basic knowledge of HTML. Review the [HTML tutorial series](URL_HERE).
 - Familiarity with Flask-SQLAlchemy concepts. See the [Flask-SQLAlchemy guide](URL_HERE).
 
-## Setup & Run
-
 1. Clone the repository: 
     ```bash
     git clone https://github.com/ramvilla997/flask_app.git
     ```
 
-2. Navigate to the project directory:
-    ```bash
-    cd flask_app
-    ```
-
-3. Install the required dependencies (preferably in a virtual environment):
-    ```bash
-    pip install -r requirements.txt
-    ```
-
-4. Run the application:
-    ```bash
-    python run.py
-    ```
-
-Visit `http://localhost:5000` in your browser to access the application.
-
-## Contribution
-
-Feel free to raise issues, provide feedback, or contribute to the project. We appreciate your input!
+Certainly! Here's a concise and organized breakdown of the installation steps:
 
 ---
 
-You can now place this `README.md` in the root of your `flask_app` directory. Make sure to replace the `URL_HERE` placeholders with actual URLs where needed.
+## Installation Guide
+
+### **Step 1 — Installing Flask and Flask-SQLAlchemy**
+
+#### **1.1 Setting Up the Environment**
+
+Navigate to your `flask_app` directory and activate your virtual environment:
+
+```bash
+$ cd path/to/flask_app
+$ source my_env/bin/activate
+```
+
+#### **1.2 Installing Required Packages**
+
+With the virtual environment active, install the necessary packages using `pip`:
+
+```bash
+$ pip install Flask Flask-SQLAlchemy
+```
+
+### **Step 2 — Setting Flask Environment Variables**
+
+#### **2.1 Specifying Application Directory**
+
+Set the `app` package as the directory where Flask should locate the `create_app()` factory function:
+
+```bash
+$ export FLASK_APP=app
+```
+_Note: Typically, for single-file Flask applications, this step involves specifying a `app.py` file. However, in this structured approach, the `app` refers to the project's main directory containing the `__init__.py` file._
+
+#### **2.2 Enabling Development Mode**
+
+Enable the Flask development mode for a better debugging experience:
+
+```bash
+$ export FLASK_ENV=development
+```
+
+### **Step 3 — Running the Application**
+
+To run the application, use the `flask run` command:
+
+```bash
+$ flask run
+```
+
+#### **3.1 Testing the Application**
+
+With your development server running, open your browser and visit:
+
+[http://127.0.0.1:5000/test/](http://127.0.0.1:5000/test/)
+
+You should see a page with the heading: **Testing the Flask Application Factory Pattern**.
+
+---
+
+That's it! You've successfully set up and run your Flask application using the Application Factory Pattern.
+
+
 
 
 
